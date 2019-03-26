@@ -1,0 +1,11 @@
+#version 330 core
+in vec2 outUV;
+
+uniform vec4 color = vec4(1.0,1.0,1.0,1.0);
+uniform sampler2D myTextureSampler;
+uniform vec2 addUV;
+
+void main(){
+	vec4 texCol = texture (myTextureSampler, outUV);
+	gl_FragColor = texCol;
+}
